@@ -7,7 +7,7 @@
     <title>Edit Product</title>
 </head>
 <body>
-    <form action="update" method="post">
+    <form action="http://localhost/ci4/ci4ku/public/product/update" method="post">
         <input type="text" name="product_name" value="<?= $product->product_name;?>">
         <input type="text" name="product_price" value="<?= $product->product_price;?>">
         <input type="hidden" name="product_id" value="<?= $product->product_id;?>">

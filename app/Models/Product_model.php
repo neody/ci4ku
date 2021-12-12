@@ -26,4 +26,10 @@ class Product_model extends Model
         return $query;
     }
  
+ 
+    public function deleteProduct($id)
+    {
+        $query = $this->db->table($this->table)->delete(array('product_id' => $id));
+        return $query;
+    } 
 }

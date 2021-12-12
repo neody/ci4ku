@@ -44,6 +44,12 @@ class Product extends Controller
             'product_price' => $this->request->getPost('product_price'),
         );
         $model->updateProduct($data, $id);
-        return redirect()->to('ci4/public/product');
+        return redirect()->to('./ci4/public/product');
+    }
+    public function delete($id)
+    {
+        $model = new Product_model();
+        $model->deleteProduct($id);
+        return redirect()->to('../');
     }
 }
